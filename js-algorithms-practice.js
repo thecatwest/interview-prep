@@ -62,7 +62,7 @@ function palindrome(str) {
     let array = str.split('');
     let count = array.length/2;
     for(let i = 0; i < count; i++){
-        if(array[i[!== array[array.length - 1 -i]){
+        if(array[i !== array[array.length - 1 -i]]){
             return false;
         }
     }
