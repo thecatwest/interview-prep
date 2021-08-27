@@ -77,11 +77,12 @@ function reverseInt(n) {
     let revNum = parseInt(String(n).split('').reverse().join(''));
     return n >= 0 ? revNum : revNum *-1;
 }
-return reverseInt(-300);
+// TODO: throws illegal return statement error - figure out why
+// return reverseInt(-103);
 
 // FizzBuzz - fn that clgs numbers from 1 to n. Replace multiples of 3 with fizz, multiples of 5 with buzz, multiples of both 3 and 5 with fizzbuzz
 function fizzBuzz(n) {
-    for(let i = o; i <= n; i++){
+    for(let i = 0; i <= n; i++){
         if(i%3 === 0 && i%5 === 0){
             console.log('fizzbuzz');
         } else if(i%3 === 0){
@@ -94,5 +95,24 @@ function fizzBuzz(n) {
     }
 }
 
+// not sure why this is returning warning...
 fizzBuzz(16);
 
+// find duplicate number in array of integers using hash
+const arr = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10, 10];
+
+const findDuplicates = (arr) => {
+    const foundDupes = {};
+
+    for(let i = 0; i < arr.length; i++) {
+        if(foundDupes[arr[i]]) {
+            return arr[i]
+        } else {
+            foundDupes[arr[i]] = arr[i];
+        }
+    }
+
+    return false;
+}
+
+console.log(findDuplicates(arr));
